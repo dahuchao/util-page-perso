@@ -1,20 +1,21 @@
 # util-page-perso
 Utilitaire pour travailler des pages personnalisée d'un SAAS
 
-Installation
+## Installation
 
 L'utilitaire s'appuie sur nodesjs qui doit par conséquent être installé préallablement.
 Lancer la commande suivante : npm install
 Edit
-Utilisation
+
+## Utilisation
 
 Pour lancer l'utilitaire, il suffit d’exécuter la commande suivante dans une boite DOS à la racine des sources:
 
-$ gulp dev --page <dossier-page>
+    $ gulp dev --page <dossier-page>
 
 Exemple d'ouverture de l'utilitaire pour la page details actualité
 
-$ gulp dev --page details_actualites
+    $ gulp dev --page details_actualites
 
 Le programme ouvre une page dans le navigateur par défaut à l'adresse : http://localhost:3000. A cette étape, la page est blanche (rien ne s'affiche). Mais, lorsque le développeur modifie un fichier html du répertoire, le navigateur est automatiquement rafraichit.
 
@@ -62,19 +63,19 @@ L'utilitaire surveille les fichiers et lorsque le développeur en modifie un, il
 
 Le fichier index.html est un document très simple qui ne fait qu'afficher le fichier dev.html dans une balise iframe :
 
-<html>
+    <html>
 
-<head>
-    <title>Réalisez votre potentiel: legroupelaposte</title>
-    <script type="text/javascript" src="../csod-jquery-1.7.2.min.js"></script>
-</head>
+    <head>
+        <title>Réalisez votre potentiel: legroupelaposte</title>
+        <script type="text/javascript" src="../csod-jquery-1.7.2.min.js"></script>
+    </head>
 
-<body>
-    <div>
-        <iframe src="./dev.html" width="100%" height="800px" scrolling="false" />
-    </div>
-</body>
+    <body>
+        <div>
+            <iframe src="./dev.html" width="100%" height="800px" scrolling="false" />
+        </div>
+    </body>
 
-</html>
+    </html>
 
 Notons que toutes les pages ouvertes à l'adresse localhost:3000 sont rafraichies, dans tous les navigateurs. Vous pouvez ainsi voir le rendu de votre page dans Firefox, Chrome et IE immédiatement.

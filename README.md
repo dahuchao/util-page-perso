@@ -1,11 +1,16 @@
 # util-page-perso
 Utilitaire pour travailler des pages personnalisée d'un SAAS
 
+Cet utilitaire traite des problèmes de chemin vers les images par exemple, traite du problème d'encodage et facilite 
+le travail du développeur en lui évitant de sortir de son éditeur pour raffraichir son navigateur afin d'observer
+les effets de ses changements.
+
 ## Installation
 
 L'utilitaire s'appuie sur nodesjs qui doit par conséquent être installé préallablement.
-Lancer la commande suivante : npm install
-Edit
+Lancer la commande suivante : 
+
+    $ npm install
 
 ## Utilisation
 

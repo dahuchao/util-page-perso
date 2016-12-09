@@ -1,0 +1,22 @@
+{
+  "name": "utilitaire-html",
+  "version": "1.0.0",
+  "description": "Utilitaire pour travailler des pages personnalisée d'un SAAS",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-debug": "^3.0.0",
+    "gulp-exec": "^2.1.2",
+    "gulp-param": "^1.0.3",
+    "gulp-rename": "latest",
+    "gulp-replace": "^0.5.4",
+    "gulp-util": "^3.0.7",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3"
+  },
+  "scripts": {
+    "start": "gulp dev"
+  },
+  "license": "ISC"
+}

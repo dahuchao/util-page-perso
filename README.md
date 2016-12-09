@@ -19,47 +19,47 @@ Exemple d'ouverture de l'utilitaire pour la page details actualité
 
 Le programme ouvre une page dans le navigateur par défaut à l'adresse : http://localhost:3000. A cette étape, la page est blanche (rien ne s'affiche). Mais, lorsque le développeur modifie un fichier html du répertoire, le navigateur est automatiquement rafraichit.
 
-Comment ca marche.
+## Comment ca marche (pas de mistère)
 
 L'utilitaire est un script gulp lancé par nodejs.
 
 Organisation des sources
 
-/
-|- package.json
-|- gulpfile.js
-|- index.html
-|- dossier-page/
-|  |- block-page.html
-|  |- img/
-|  |  |- image.png
+    /
+    |- package.json
+    |- gulpfile.js
+    |- index.html
+    |- dossier-page/
+    |  |- block-page.html
+    |  |- img/
+    |  |  |- image.png
 
 Chaque page personnalisée fait l'objet d'un dossier (dossier-page) dans lequel se trouve tous les block de la page ainsi que les images qui leurs sont associées.
 
 L'utilitaire enregistre une copie du fichier index.html dans le dossier-page de la page.
 
-/
-|- package.json
-|- gulpfile.js
-|- index.html
-|- dossier-page/
-|  |- block-page.html
-|  |- index.html
-|  |- img/
-|  |  |- image.png
+    /
+    |- package.json
+    |- gulpfile.js
+    |- index.html
+    |- dossier-page/
+    |  |- block-page.html
+    |  |- index.html
+    |  |- img/
+    |  |  |- image.png
 
 L'utilitaire surveille les fichiers et lorsque le développeur en modifie un, il le recopie sous le nom dev.html en ayant relocaliser les liens pour qu'ils fonctionnent en local.
 
-/
-|- package.json
-|- gulpfile.js
-|- index.html
-|- dossier-page/
-|  |- block-page.html
-|  |- index.html
-|  |- dev.html
-|  |- img/
-|  |  |- image.png
+    /
+    |- package.json
+    |- gulpfile.js
+    |- index.html
+    |- dossier-page/
+    |  |- block-page.html
+    |  |- index.html
+    |  |- dev.html
+    |  |- img/
+    |  |  |- image.png
 
 Le fichier index.html est un document très simple qui ne fait qu'afficher le fichier dev.html dans une balise iframe :
 

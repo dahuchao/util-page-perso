@@ -7,8 +7,8 @@ les effets de ses changements.
 
 ## Installation
 
-L'utilitaire s'appuie sur nodesjs qui doit par conséquent être installé préallablement.
-Lancer la commande suivante : 
+L'utilitaire s'appuie sur nodejs qui doit par conséquent être installé préallablement.
+Ensuite l'installation est faite par cette commande : 
 
     $ npm install
 

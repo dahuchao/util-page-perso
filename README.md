@@ -16,13 +16,11 @@ Lancer la commande suivante :
 
 Pour lancer l'utilitaire, il suffit d’exécuter la commande suivante dans une boite DOS à la racine des sources:
 
-    $ gulp dev --page <dossier-page>
+    $ gulp dev --page dossier-page
 
-Exemple d'ouverture de l'utilitaire pour la page details actualité
-
-    $ gulp dev --page details_actualites
-
-Le programme ouvre une page dans le navigateur par défaut à l'adresse : http://localhost:3000. A cette étape, la page est blanche (rien ne s'affiche). Mais, lorsque le développeur modifie un fichier html du répertoire, le navigateur est automatiquement rafraichit.
+Le programme ouvre une page dans le navigateur par défaut à l'adresse : http://localhost:3000. 
+A cette étape, la page est blanche (rien ne s'affiche) dans le navigateur (pas de panic:). 
+Mais, lorsque le développeur modifie un fichier html du répertoire (exemple : block-page.html), le navigateur est automatiquement rafraichit.
 
 ## Comment ca marche (pas de mistère)
 

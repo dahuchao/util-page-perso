@@ -69,7 +69,7 @@ Le fichier index.html est un document très simple qui ne fait qu'afficher le fi
     <html>
 
     <head>
-        <title>Réalisez votre potentiel: legroupelaposte</title>
+        <title>Votre titre</title>
         <script type="text/javascript" src="../csod-jquery-1.7.2.min.js"></script>
     </head>
 

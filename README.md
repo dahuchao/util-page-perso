@@ -66,7 +66,7 @@ Au lancement de cette commande
 
     $ gulp dev --page dossier-page
 
-l'utilitaire enregistre une copie du fichier index.html dans le <dossier-page> de la page.
+l'utilitaire enregistre une copie du fichier index.html dans le dossier-page de la page.
 
     /
     |- package.json
@@ -74,7 +74,7 @@ l'utilitaire enregistre une copie du fichier index.html dans le <dossier-page> d
     |- index.html
     |- dossier-page/
     |  |- block-page.html
-    |  |- index.html  <<<<<<<<<<<<<<
+    |  |- index.html
     |  |- img/
     |  |  |- image.png
 
@@ -88,7 +88,7 @@ en ayant relocaliser les liens pour qu'ils fonctionnent en local.
     |- dossier-page/
     |  |- block-page.html
     |  |- index.html
-    |  |- dev.html  <<<<<<<<<<<<<<
+    |  |- dev.html
     |  |- img/
     |  |  |- image.png
 

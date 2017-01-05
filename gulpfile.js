@@ -8,22 +8,10 @@ const replace = require('gulp-replace');
 const rename = require("gulp-rename");
 const clean = require('gulp-clean');
 
-// $ gulp dev --page contact-eg 
- 
-gulp.task('nettoyage', function () {
-    gulp.src('*/index.html', {read: false})
-        .pipe(clean());
-    gulp.src('*/dev.html', {read: false})
-        .pipe(clean());
-});
-function installation (page) {
-    gulp.src("index.html")
-        .pipe(debug())
-        .pipe(gulp.dest(page));
-};
+// $ gulp dev --page dossier-page
+
 gulp.task("dev", function (page) {
     console.log("page: " + page);
-    installation(page);
     var chemin = page;
     // Fonction qui remplace le chemin serveur CSOD vers le chemin local
     // - chemin CSOD : /clientimg/legroupelaposte/welcome/
@@ -33,12 +21,16 @@ gulp.task("dev", function (page) {
             .pipe(debug())
             .pipe(replace(/.clientimg.legroupelaposte.welcome/g, 'img'))
             .pipe(rename("dev.html"))
-            .pipe(gulp.dest(chemin))
+            .pipe(gulp.dest('./'))
             .pipe(browserSync.stream());
     };
     browserSync.init({
         server: {
-            baseDir: "./" + chemin
+            baseDir: ".",
+            routes: {
+                "/js": ".",
+                "/img": "./" + chemin + "/img"
+            }
         }
     });
     gulp.watch(chemin + "/**/*.html").on("change", reloc);

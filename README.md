@@ -24,7 +24,7 @@ Cloner le dépot git dans un répertoire d'une station de travail :
 
 Installer l'utilitaire en lancant la commande suivante : 
 
-    $ npm install
+    $ cd util-page-perso & npm install
 
 ## Utilisation
 

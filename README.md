@@ -66,18 +66,6 @@ Au lancement de cette commande
 
     $ gulp dev --page dossier-page
 
-l'utilitaire enregistre une copie du fichier index.html dans le dossier-page de la page.
-
-    /
-    |- package.json
-    |- gulpfile.js
-    |- index.html
-    |- dossier-page/
-    |  |- block-page.html
-    |  |- index.html
-    |  |- img/
-    |  |  |- image.png
-
 L'utilitaire surveille les fichiers et lorsque le développeur en modifie un, il le recopie sous le nom dev.html 
 en ayant relocaliser les liens pour qu'ils fonctionnent en local.
 
@@ -85,26 +73,28 @@ en ayant relocaliser les liens pour qu'ils fonctionnent en local.
     |- package.json
     |- gulpfile.js
     |- index.html
+    |- dev.html
     |- dossier-page/
     |  |- block-page.html
-    |  |- index.html
-    |  |- dev.html
     |  |- img/
     |  |  |- image.png
 
-Le fichier index.html est un document très simple qui ne fait qu'afficher le fichier dev.html dans une balise iframe :
+Le fichier index.html est un document très simple qui ne fait qu'afficher le fichier dev.html dans le corp de la page d'accueil :
 
     <html>
 
     <head>
         <title>Votre titre</title>
-        <script type="text/javascript" src="../csod-jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/js/csod-jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("document chargé.")
+            $("body").load("dev.html");
+        });
+    </script>
     </head>
 
     <body>
-        <div>
-            <iframe src="./dev.html" width="100%" height="800px" scrolling="false" />
-        </div>
     </body>
 
     </html>
